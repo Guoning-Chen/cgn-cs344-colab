@@ -20,4 +20,9 @@ Finish CS344 Projects online using Google's free GPU!
 
 1. all `.ipynb` files: change `git+git` in `!pip install git+http://github.com/depctg/nvcc4jupyter.git` to `git+http`.
 2. file `CMakeLists.txt`: repalce the previous one with `set(CUDA_NVCC_FLAGS "-gencode;arch=compute_75,code=sm_75;")` for the T4 GPU used in Colab now.
-3. file`hw1.ipynb`, `hw2.ipynb`：add parameter `cmap='gray'` to `imshow()` calls in order to display the last three images correctly, otherwise they will be green.
+3. file `hw1.ipynb`,`hw2.ipynb`：add parameter `cmap='gray'` to `imshow()` calls in order to display the last three images correctly, otherwise they will be green.
+4. file `HW1.cpp`,`HW2.cpp`: 添加
+```cpp
+#include <opencv2/imgcodecs/legacy/constants_c.h>
+#include <opencv2/imgproc/types_c.h>
+```
