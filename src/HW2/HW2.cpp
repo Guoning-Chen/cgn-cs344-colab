@@ -35,7 +35,7 @@ void preProcess(uchar4 **h_inputImageRGBA, uchar4 **h_outputImageRGBA,
   //make sure the context initializes ok
   checkCudaErrors(cudaFree(0));
 
-  cv::Mat image = cv::imread(filename.c_str(), IMREAD_COLOR);
+  cv::Mat image = cv::imread(filename.c_str(), CV_LOAD_IMAGE_COLOR);
   if (image.empty()) {
     std::cerr << "Couldn't open file: " << filename << std::endl;
     exit(1);
