@@ -118,7 +118,6 @@ void cleanUp(void)
 {
   cudaFree(d_inputImageRGBA__);
   cudaFree(d_outputImageRGBA__);
-  cleanup();
   delete[] h_filter__;
 }
 
